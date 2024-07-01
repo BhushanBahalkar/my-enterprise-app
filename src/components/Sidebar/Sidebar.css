@@ -1,0 +1,57 @@
+.sidebar {
+  width: 250px;
+  background-color: #002e5b;
+  color: #fff;
+  height: 100vh;
+  padding: 5px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar .logo img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%; /* Ensure the ul takes full width */
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%; /* Ensure the li takes full width */
+  text-align: center; /* Center the text */
+}
+
+.sidebar ul li.dropdown {
+  position: relative;
+}
+
+.sidebar ul li.dropdown-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 20px; /* Indentation for dropdown items */
+}
+
+.sidebar ul li.dropdown-menu li {
+  padding: 8px;
+  cursor: pointer;
+  text-align: left; /* Align dropdown items to the left */
+}
+
+.sidebar ul li.dropdown-menu li:hover {
+  background-color: #0b4177;
+}
+
+.sidebar ul li:hover {
+  background-color: #0b4177;
+}
