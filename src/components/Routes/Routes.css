@@ -10,9 +10,9 @@
     margin: 0;
     padding: 1px;
     overflow: hidden;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,50 +20,51 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     display: flex;
     margin: 0;
-    
-  }
-  
-  .form-group {
+
+}
+
+.form-group {
     margin-bottom: 10px;
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     margin-right: 10px;
-  }
-  
-  table {
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
-  
-  th, td {
+}
+
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
-  }
-  
-  .active {
+}
+
+.active {
     color: green;
-  }
-  
-  .inactive {
+}
+
+.inactive {
     color: red;
-  }
-  
-  .app {
+}
+
+.app {
     padding: 20px;
-  }
-  
-  .blurred {
+}
+
+.blurred {
     filter: blur(5px);
-  }
-  
-  .popup {
+}
+
+.popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -73,86 +74,84 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .popup-content {
+}
+
+.popup-content {
     background: white;
     padding: 20px;
     border-radius: 5px;
     position: relative;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
     font-size: 20px;
-  }
-  .modal-header{
+}
+
+.modal-header {
     height: auto;
     width: auto;
     background-color: #ffffff;
     margin: 0;
     border-radius: 8px;
-  }
-  #t1{
-    width: 270px;
-    height: 50px;
-    border-radius: 10px;
-    margin-left: 10px ;
-    
-  }
-  #t2{
+}
+
+#t1 {
     width: 270px;
     height: 50px;
     border-radius: 10px;
     margin-left: 10px;
-    
-  }
-  #t3{
+
+}
+
+#t2 {
     width: 270px;
     height: 50px;
     border-radius: 10px;
-  }
-  #c1{
-    margin-left: 50px;
-  }
-  #c2{
-    margin-left: 30px;
-    margin-top: 20px;
-  }
-  .d1{
-    display: flex;
-    margin-left: px ;
+    margin-left: 10px;
 
-  }
-  .d2{
+}
+
+#c1 {
+    margin-left: 50px;
+}
+
+#c2 {
+    margin-left: 30px;
+}
+
+.d1 {
+    display: flex;
+    margin-left: 10px;
+
+}
+
+.d2 {
     margin-left: 90%;
-  }
-  #h1{
+}
+
+#h1 {
     align-items: center;
-    align-self:center;
+    align-self: center;
     align-content: center;
     text-align: center;
-  }
-  #b1{
+}
+
+#b1 {
     background-color: blue;
     color: #ffffff;
     border-radius: 8px;
-    width:60px ;
+    width: 60px;
     height: 30px;
-    margin-bottom:10px ;
+    margin-bottom: 10px;
     margin-right: 10px;
-  }
-  
-  #file-upload{
-    display: none;
-    height: 70px;
-    width: 70px;
-  }
-  #upload{
-    font-size: 40px;
-    margin-left: 50px;
-    margin-top: 10px;
-  }
+}
+#route-name{
+    width: 270px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 10px ;
+}

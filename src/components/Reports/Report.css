@@ -1,0 +1,25 @@
+#btn {
+    margin-top: 20px;
+    display: flex;
+
+}
+
+#report {
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+}
+
+#controls {
+    margin-top: 30px;
+}
+
+#d1 {
+    margin-left: 80%;
+    display: flex;
+}
+
+#dataTable {
+    width: 100%;
+}

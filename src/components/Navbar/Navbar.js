@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import './Navbar.css';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faShoppingCart, faExpand, faBell, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExpand, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import './Navbar.css';
+import logo from '../logo/logoom.png';
 
+const Navbar = ({ toggleSidebar, onLogout }) => {
+  const [currentTime, setCurrentTime] = React.useState(new Date());
 
-const Navbar = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
+  React.useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000); // Update every second
+    }, 1000);
 
-    return () => clearInterval(timer); // Clean up the interval on component unmount
+    return () => clearInterval(timer);
   }, []);
 
   const formatTime = (date) => {
@@ -25,28 +25,34 @@ const Navbar = () => {
     return date.toLocaleDateString('en-US', options);
   };
 
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch((err) => {
+        console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  };
+
   return (
     <nav className="navbar">
-      <div className="navbar-search">
-        <input type="text" placeholder="Search By Vehicle Name / Employee Name" />
-        <button>
-          <FontAwesomeIcon icon={faSearch} />
-        </button>
+      <span id='m1' className="material-symbols-outlined" onClick={toggleSidebar}>menu</span>
+      <div className="logo">
+        <img id='img' src={logo} alt="Logo" />
       </div>
-      <div className="navbar-icons">
-        <FontAwesomeIcon icon={faShoppingCart} />
-        <FontAwesomeIcon icon={faExpand} />
-        <FontAwesomeIcon icon={faBell} />
-      </div>
+      <div className="dash">|</div>
       <div className="navbar-datetime">
         <span>{formatDate(currentTime)} {formatTime(currentTime)}</span>
       </div>
-      <div className="navbar-organization">
-        OM Enterprises
-      </div>
+      <div className="dash">|</div>
       <div className="navbar-user">
-        <span>Good Morning! Mr. ABC</span>
-        <FontAwesomeIcon icon={faSignOutAlt} />
+        <span>Mr. ABC</span><br></br>
+        <FontAwesomeIcon icon={faSignOutAlt} aria-label="Sign Out" onClick={onLogout} />
+      </div>
+      <div className="dash">|</div>
+      <div className="navbar-icons" onClick={toggleFullscreen}>
+        <FontAwesomeIcon icon={faExpand} aria-label="Expand" />
       </div>
     </nav>
   );

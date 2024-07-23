@@ -1,10 +1,18 @@
 .sidebar {
-  width: 250px;
-  background-color: #002e5b;
+  width: 210px;
+  background-color: #367ec6;
   color: #fff;
   height: 100vh;
   padding: 5px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: fixed;
+  left: -210px; /* Start off-screen */
+  transition: left 0.3s;
+}
+
+.sidebar.open {
+  left: 0; /* Slide in when open */
 }
 
 .sidebar .logo img {
@@ -39,13 +47,14 @@
   padding: 0;
   margin: 0;
   margin-top: 10px;
-  padding-left: 20px; /* Indentation for dropdown items */
+  padding-left: 0; /* Remove indentation for dropdown items */
+  background-color: #367ec6; /* Ensure the background matches the sidebar */
 }
 
 .sidebar ul li.dropdown-menu li {
   padding: 8px;
   cursor: pointer;
-  text-align: left; /* Align dropdown items to the left */
+  text-align: center; /* Align dropdown items to the center */
 }
 
 .sidebar ul li.dropdown-menu li:hover {
@@ -54,4 +63,34 @@
 
 .sidebar ul li:hover {
   background-color: #0b4177;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.menu-item .material-symbols-outlined {
+  margin-right: 8px;
+}
+
+#link {
+  color: #fff;
+}
+
+#li1 {
+  font-size: 1.4rem;
 }
