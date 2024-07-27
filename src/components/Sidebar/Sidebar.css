@@ -7,12 +7,12 @@
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: fixed;
-  left: -210px; /* Start off-screen */
+  left: -210px; 
   transition: left 0.3s;
 }
 
 .sidebar.open {
-  left: 0; /* Slide in when open */
+  left: 0;
 }
 
 .sidebar .logo img {
@@ -28,14 +28,14 @@
 .sidebar ul {
   list-style-type: none;
   padding: 0;
-  width: 100%; /* Ensure the ul takes full width */
+  width: 100%; 
 }
 
 .sidebar ul li {
   padding: 10px;
   cursor: pointer;
-  width: 100%; /* Ensure the li takes full width */
-  text-align: center; /* Center the text */
+  width: 100%; 
+  text-align: center; 
 }
 
 .sidebar ul li.dropdown {
@@ -47,14 +47,14 @@
   padding: 0;
   margin: 0;
   margin-top: 10px;
-  padding-left: 0; /* Remove indentation for dropdown items */
-  background-color: #367ec6; /* Ensure the background matches the sidebar */
+  padding-left: 0; 
+  background-color: #367ec6; 
 }
 
 .sidebar ul li.dropdown-menu li {
   padding: 8px;
   cursor: pointer;
-  text-align: center; /* Align dropdown items to the center */
+  text-align: center; 
 }
 
 .sidebar ul li.dropdown-menu li:hover {

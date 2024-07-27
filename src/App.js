@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard/Dashboard'; // Ensure this path is correct
+import Dashboard from './components/Dashboard/Dashboard'; 
 import EmpTable from './components/EmployeeTable/EmpTable';
 import Navbar from './components/Navbar/Navbar';
 import RoutesTable from './components/Routes/RoutesTable';
