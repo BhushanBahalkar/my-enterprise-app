@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import EmpModal from '../EmployeeTable/EmployeeModal/EmpModal';
-import './EmplTable.css';
+import React, { useState } from "react";
+import EmpModal from "../EmployeeTable/EmployeeModal/EmpModal";
+import "./EmplTable.css";
 
 const EmpTable = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,7 +12,7 @@ const EmpTable = () => {
   };
 
   const deleteEmployee = (id) => {
-    setEmployees(employees.filter(emp => emp.id !== id));
+    setEmployees(employees.filter((emp) => emp.id !== id));
   };
 
   const editEmployee = (employee) => {
@@ -21,7 +21,7 @@ const EmpTable = () => {
   };
 
   const updateEmployee = (updatedEmployee) => {
-    const updatedEmployees = employees.map(emp =>
+    const updatedEmployees = employees.map((emp) =>
       emp.id === updatedEmployee.id ? updatedEmployee : emp
     );
     setEmployees(updatedEmployees);
@@ -31,10 +31,12 @@ const EmpTable = () => {
 
   return (
     <div className="emp-table">
-      <button id='bt1' onClick={() => setIsModalOpen(true)}>Add New Employee</button>
-      <table className='table1'>
+      <button id="bt1" onClick={() => setIsModalOpen(true)}>
+        Add New Employee
+      </button>
+      <table className="table1">
         <thead>
-          <tr id='tr1'>
+          <tr id="tr1">
             <th>Action</th>
             <th>Sr. No.</th>
             <th>First Name</th>
@@ -49,10 +51,17 @@ const EmpTable = () => {
           {employees.map((emp, index) => (
             <tr key={emp.id}>
               <td>
-                <span className="material-symbols-outlined" onClick={() => deleteEmployee(emp.id)}>
+                <span
+                  className="material-symbols-outlined"
+                  onClick={() => deleteEmployee(emp.id)}
+                >
                   delete
-                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="material-symbols-outlined" onClick={() => editEmployee(emp)}>
+                </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span
+                  className="material-symbols-outlined"
+                  onClick={() => editEmployee(emp)}
+                >
                   edit
                 </span>
               </td>
@@ -60,10 +69,20 @@ const EmpTable = () => {
               <td>{emp.EmployeName}</td>
               <td>{emp.EmployeLastname}</td>
               <td>{emp.AdharNo}</td>
-              <td className={emp.status === 'Active' ? 'active' : 'inactive'}>{emp.status}</td>
+              <td className={emp.status === "Active" ? "active" : "inactive"}>
+                {emp.status}
+              </td>
               <td>{emp.EmployeNumber}</td>
               <td>
-                {emp.image ? <img src={emp.image} alt="Employee" style={{ width: '50px', height: '50px' }} /> : 'No Image'}
+                {emp.image ? (
+                  <img
+                    src={emp.image}
+                    alt="Employee"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                ) : (
+                  "No Image"
+                )}
               </td>
             </tr>
           ))}
@@ -71,7 +90,10 @@ const EmpTable = () => {
       </table>
       <EmpModal
         isOpen={isModalOpen}
-        onRequestClose={() => { setIsModalOpen(false); setSelectedEmployee(null); }}
+        onRequestClose={() => {
+          setIsModalOpen(false);
+          setSelectedEmployee(null);
+        }}
         employees={employees}
         addEmployee={addEmployee}
         selectedEmployee={selectedEmployee}
