@@ -1,0 +1,96 @@
+.sidebar {
+  width: 210px;
+  background-color: #367ec6;
+  color: #fff;
+  height: 100vh;
+  padding: 5px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: fixed;
+  left: -210px; 
+  transition: left 0.3s;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .logo img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%; 
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%; 
+  text-align: center; 
+}
+
+.sidebar ul li.dropdown {
+  position: relative;
+}
+
+.sidebar ul li.dropdown-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 0; 
+  background-color: #367ec6; 
+}
+
+.sidebar ul li.dropdown-menu li {
+  padding: 8px;
+  cursor: pointer;
+  text-align: center; 
+}
+
+.sidebar ul li.dropdown-menu li:hover {
+  background-color: #0b4177;
+}
+
+.sidebar ul li:hover {
+  background-color: #0b4177;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.menu-item .material-symbols-outlined {
+  margin-right: 8px;
+}
+
+#link {
+  color: #fff;
+}
+
+#li1 {
+  font-size: 1.4rem;
+}
