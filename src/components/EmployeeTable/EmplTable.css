@@ -2,12 +2,10 @@
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px;
-
-
 }
-.emp-table{
+.emp-table {
   padding: 10px;
   border-radius: 20px;
 }
@@ -30,7 +28,8 @@
   border-collapse: collapse;
 }
 
-.shift-table th, .shift-table td {
+.shift-table th,
+.shift-table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
@@ -40,7 +39,8 @@
   background-color: #f2f2f2;
 }
 
-.shift-table .edit-button, .shift-table .delete-button {
+.shift-table .edit-button,
+.shift-table .delete-button {
   margin-right: 10px;
   padding: 5px 10px;
   border: none;
@@ -85,7 +85,7 @@
 .pagination button:hover {
   background-color: #0056b3;
 }
-#bt1{
+#bt1 {
   background-color: #6090c2;
   color: #fff;
   width: 150px;
@@ -94,13 +94,12 @@
   margin-top: 50px;
   margin-left: 80%;
 }
-#tr1{
-  background-color:#cac8c8;
+#tr1 {
+  background-color: #cac8c8;
   padding: 10px;
   width: 100%;
 }
-.table1{
+.table1 {
   width: 100%;
   margin-top: 30px;
-  
 }
