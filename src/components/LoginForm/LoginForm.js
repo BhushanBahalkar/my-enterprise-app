@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
-import './LoginForm.css';
+import React, { useState } from "react";
+import "./LoginForm.css";
 
 const Login = ({ onLogin }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add logic
     
-    if (username === 'admin' && password === 'password') {
+    // Add logic
+
+    if (username === "admin" && password === "password") {
       onLogin(true);
     } else {
-      alert('Invalid credentials');
+      alert("Invalid credentials");
     }
   };
 
