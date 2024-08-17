@@ -1,0 +1,28 @@
+
+.Vehicle {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
