@@ -7,7 +7,9 @@ const Login = ({ onLogin }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-  
+    
+    // Add logic
+
     if (username === 'admin' && password === 'password') {
       onLogin(true);
     } else {
