@@ -1,24 +1,24 @@
 .navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 0.5rem 1rem;
-    color: rgb(0, 0, 0);
-    height: 50px;
-    width: 100%;
-    border-bottom: 1px solid lightgrey;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-    /* Ensure navbar is above the sidebar */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  color: rgb(0, 0, 0);
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  /* Ensure navbar is above the sidebar */
 }
 
 #img {
-    width: 300px;
+  width: 300px;
 }
 
 #m1 {
-margin-right: 00px;
+  margin-right: 00px;
 }
