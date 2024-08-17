@@ -1,29 +1,28 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import './EmplModal.css';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import "./EmplModal.css";
 
-
-Modal.setAppElement('#root'); // Set the app element for accessibility
+Modal.setAppElement("#root"); // Set the app element for accessibility
 
 const EmpModal = ({ isOpen, onRequestClose, employees, addEmployee }) => {
-  const [unit, setUnit] = useState('');
-  const [shift, setShift] = useState('');
+  const [unit, setUnit] = useState("");
+  const [shift, setShift] = useState("");
   const [flexible, setFlexible] = useState(false);
-  const [fromTime, setFromTime] = useState('');
-  const [toTime, setToTime] = useState('');
+  const [fromTime, setFromTime] = useState("");
+  const [toTime, setToTime] = useState("");
   const [active, setActive] = useState(false);
 
   const handleAdd = () => {
     const newEmployee = {
       id: employees.length + 1,
       unit,
-      organization: 'OM Enterprises',
+      organization: "OM Enterprises",
       shift,
       flexible,
       fromTime,
       toTime,
       hours: 9, // Assuming a fixed 9 hours shift, adjust accordingly
-      status: active ? 'Active' : 'In Active',
+      status: active ? "Active" : "In Active",
     };
     addEmployee(newEmployee);
     onRequestClose();
@@ -40,29 +39,53 @@ const EmpModal = ({ isOpen, onRequestClose, employees, addEmployee }) => {
       <div className="modal-content">
         <div className="form-group">
           <label>Unit</label>
-          <input type="text" value={unit} onChange={(e) => setUnit(e.target.value)} />
+          <input
+            type="text"
+            value={unit}
+            onChange={(e) => setUnit(e.target.value)}
+          />
         </div>
         <div className="form-group">
           <label>Shift</label>
-          <input type="text" value={shift} onChange={(e) => setShift(e.target.value)} />
+          <input
+            type="text"
+            value={shift}
+            onChange={(e) => setShift(e.target.value)}
+          />
         </div>
         <div className="form-group">
           <label>
-            <input type="checkbox" checked={flexible} onChange={() => setFlexible(!flexible)} />
+            <input
+              type="checkbox"
+              checked={flexible}
+              onChange={() => setFlexible(!flexible)}
+            />
             Flexible
           </label>
         </div>
         <div className="form-group">
           <label>From Time</label>
-          <input type="time" value={fromTime} onChange={(e) => setFromTime(e.target.value)} />
+          <input
+            type="time"
+            value={fromTime}
+            onChange={(e) => setFromTime(e.target.value)}
+          />
         </div>
         <div className="form-group">
           <label>To Time</label>
-          <input type="time" value={toTime} onChange={(e) => setToTime(e.target.value)} />
+          <input
+            type="time"
+            value={toTime}
+            onChange={(e) => setToTime(e.target.value)}
+          />
         </div>
         <div className="form-group">
           <label>
-            <input type="checkbox" checked={active} onChange={() => setActive(!active)} />
+            <input
+              type="checkbox"
+              checked={active}
+              onChange={() => setActive(!active)}
+            />
             Active
           </label>
         </div>
@@ -92,11 +115,13 @@ const EmpModal = ({ isOpen, onRequestClose, employees, addEmployee }) => {
               <td>{emp.unit}</td>
               <td>{emp.organization}</td>
               <td>{emp.shift}</td>
-              <td>{emp.flexible ? 'Yes' : 'No'}</td>
+              <td>{emp.flexible ? "Yes" : "No"}</td>
               <td>{emp.fromTime}</td>
               <td>{emp.toTime}</td>
               <td>{emp.hours}</td>
-              <td className={emp.status === 'Active' ? 'active' : 'inactive'}>{emp.status}</td>
+              <td className={emp.status === "Active" ? "active" : "inactive"}>
+                {emp.status}
+              </td>
             </tr>
           ))}
         </tbody>
