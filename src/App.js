@@ -19,6 +19,7 @@ function App() {
   };
 
   return (
+
     <Router>
       <div className={`app ${isSidebarOpen ? "sidebar-open" : ""}`}>
         {isLoggedIn ? (
@@ -45,6 +46,7 @@ function App() {
         )}
       </div>
     </Router>
+    
   );
 }
 
