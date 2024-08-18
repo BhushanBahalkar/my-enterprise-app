@@ -75,14 +75,12 @@ td {
   align-items: center;
 }
 
-
 .popup-content {
   background: white;
   padding: 20px;
   border-radius: 5px;
   position: relative;
 }
-
 
 .close {
   position: absolute;
@@ -92,7 +90,6 @@ td {
   font-size: 20px;
 }
 
-
 .modal-header {
   height: auto;
   width: auto;
@@ -101,14 +98,12 @@ td {
   border-radius: 8px;
 }
 
-
 #t1 {
   width: 270px;
   height: 50px;
   border-radius: 10px;
   margin-left: 10px;
 }
-
 
 #t2 {
   width: 270px;
@@ -117,13 +112,11 @@ td {
   margin-left: 10px;
 }
 
-
 #t3 {
   width: 270px;
   height: 50px;
   border-radius: 10px;
 }
-
 
 #c1 {
   margin-left: 50px;
