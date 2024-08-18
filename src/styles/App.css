@@ -4,6 +4,7 @@
   transition: margin-left 0.3s ease-in-out;
 }
 
+
 .main-content {
   flex: 1;
   display: flex;
@@ -12,14 +13,17 @@
   margin-left: 0;
 }
 
+
 .main-content .content {
   flex: 1;
   padding: 1rem;
   transition: margin-left 0.3s;
 }
+
 .content {
   padding: 20px;
 }
+
 .sidebar {
   margin-top: 40px;
   width: 210px;
