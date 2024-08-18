@@ -5,6 +5,7 @@ import "./EmplModal.css";
 Modal.setAppElement("#root"); // Set the app element for accessibility
 
 const EmpModal = ({ isOpen, onRequestClose, employees, addEmployee }) => {
+ 
   const [unit, setUnit] = useState("");
   const [shift, setShift] = useState("");
   const [flexible, setFlexible] = useState(false);
@@ -24,18 +25,22 @@ const EmpModal = ({ isOpen, onRequestClose, employees, addEmployee }) => {
       hours: 9, // Assuming a fixed 9 hours shift, adjust accordingly
       status: active ? "Active" : "In Active",
     };
+ 
     addEmployee(newEmployee);
     onRequestClose();
+ 
   };
 
   return (
-    <Modal
+ 
+ <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       className="modal"
-      overlayClassName="overlay"
-    >
+      overlayClassName="overlay">
+
       <h2>Add New Employee</h2>
+      
       <div className="modal-content">
         <div className="form-group">
           <label>Unit</label>
